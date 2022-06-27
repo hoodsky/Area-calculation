@@ -1,0 +1,51 @@
+//TO%
+@function prc($pxOne, $pxTwo) {
+    $result: ($pxOne/$pxTwo)*100%;
+    @return $result;
+}
+
+//REM
+@function rem($px) {
+    $result: ($px/16)+rem;
+    @return $result;
+}
+
+//EM
+
+@function em($px) {
+    $result: ($px/16)+rem;
+    @return $result;
+}
+
+// адаптивное свойство
+$maxWidth: 1920 / 16; //максимальный размер экрана (px)
+$maxWidthContainer: 1200 / 16; //максимальный размер контейнера (px)
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+    $addSize: ($startSize / 16)- ($minSize / 16);
+
+    @if $type==1 {
+        //Только если меньше контейнера
+        #{$property}: ($startSize / 16) + rem;
+
+        @media (max-width: #{$maxWidthContainer + rem}) {
+            #{$property}: calc(#{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthContainer - 20}));
+        }
+    }
+
+    @else if $type==2 {
+        //Только если больше контейнера
+        #{$property}: ($startSize / 16) + rem;
+
+        @media (min-width: #{$maxWidthContainer + rem}) {
+            #{$property}: calc(#{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidth - 20}));
+        }
+    }
+
+    @else {
+        //Всегда
+        #{$property}: calc(#{($minSize /16 ) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidth - 20}));
+    }
+}
+
+//@include adaptiv-value("значение", начальный размер, конечный размер, тип(1-меньше контейнера, 2-больше, 0-всегда))
