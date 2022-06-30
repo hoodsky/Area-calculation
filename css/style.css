@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap");
+html {
+  font-family: 'Source Code Pro', monospace;
+}
+
+input {
+  border-radius: 1.875rem;
+  border: none;
+  padding: 0.3125rem 0.3125rem;
+  margin: 0.625rem;
+  font-family: 'Source Code Pro', monospace;
+  outline: none;
+}
+
+input:focus {
+  border: none;
+}
+
+.change-section {
+  background-color: gray;
+}
+
+.tile-section {
+  background-color: silver;
+  padding: 1.25rem 0.625rem;
+}
+/*# sourceMappingURL=style.css.map */
