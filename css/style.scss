@@ -56,13 +56,25 @@ html {
     font-family: 'Source Code Pro', monospace;
 }
 
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
 input {
-    border-radius: rem(30);
+    // border-radius: rem(30);
     border: none;
-    padding: rem(5) rem(5);
-    margin: rem(10);
+    // padding: rem(5) rem(5);
+    margin: rem(10) 0;
     font-family: 'Source Code Pro', monospace;
-    outline: none
+    outline: none;
+    height: rem(30);
 }
 
 input:focus {
@@ -76,4 +88,10 @@ input:focus {
 .tile-section {
     background-color: silver;
     padding: rem(20) rem(10);
+}
+
+.number-minus {
+    height: rem(30);
+    border: none;
+    width: rem(30);
 }

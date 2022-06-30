@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area calculation</title>
+    <link rel="stylesheet" href="../Area-calculation/css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -24,12 +25,20 @@
             <h3>Введите размеры</h3>
             <div>
                 <label for="tile-width">
-                    <input type="number" id="tile-width" placeholder="Ширина (см)">
+                    <button class="number-minus" type="button"
+                        onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                    <input min="0" type="number" id="tile-width" placeholder="Ширина (см)">
+                    <button class="number-plus" type="button"
+                        onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 </label>
             </div>
             <div>
                 <label for="tile-height">
-                    <input type="number" id="tile-height" placeholder="Высота (см)">
+                    <button class="number-minus" type="button"
+                        onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                    <input min="0" type="number" id="tile-height" placeholder="Высота (см)">
+                    <button class="number-plus" type="button"
+                        onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 </label>
             </div>
             <div>
@@ -39,24 +48,40 @@
         <div>
             <label for="tile-area">
                 <h3>Введите нужную площадь</h3>
-                <input type="number" id="tile-area">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="tile-area">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>m²</span>
             </label>
             <label for="tile-num">
                 <h3>Нужное количество плитки</h3>
-                <input type="number" id="tile-num">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="tile-num">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>штук</span>
             </label>
         </div>
         <div>
             <label for="">
                 <h3>Количество в одной пачке</h3>
-                <input type="number" id="num-in-box">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="num-in-box">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>шт</span>
             </label>
             <label for="">
                 <h3>Нужно пачек</h3>
-                <input type="number" id="num-box">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="num-box">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>шт</span>
             </label>
         </div>
