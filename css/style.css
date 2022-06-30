@@ -9,6 +9,10 @@ input[type="number"] {
   appearance: textfield;
 }
 
+h1 {
+  font-size: 3.125rem;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   display: none;
@@ -16,7 +20,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input {
   border: none;
-  margin: 0.625rem 0;
+  margin: 0.625rem -10px;
   font-family: 'Source Code Pro', monospace;
   outline: none;
   height: 1.875rem;
@@ -35,9 +39,19 @@ input:focus {
   padding: 1.25rem 0.625rem;
 }
 
-.number-minus {
-  height: 1.875rem;
+.number-minus,
+.number-plus {
+  height: 2rem;
   border: none;
   width: 1.875rem;
+  cursor: pointer;
+}
+
+.number-minus {
+  border-radius: 50% 0 0 50%;
+}
+
+.number-plus {
+  border-radius: 0 50% 50% 0;
 }
 /*# sourceMappingURL=style.css.map */
