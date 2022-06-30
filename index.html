@@ -14,41 +14,40 @@
     <section>
         <h2>Выберите нужное</h2>
         <select name="type" id="type">
-            <option value="tile">Плитка</option>
-            <option value="laminate">Ламинат</option>
-            <option value="roll">Рулонные покрытия</option>
+            <option id="value-tile" value="tile">Плитка</option>
+            <option id="value-laminate" value="laminate">Ламинат</option>
+            <option id="value-roll" value="roll">Рулонные покрытия</option>
         </select>
     </section>
     <section>
         <div>
             <h3>Введите размеры</h3>
             <div>
-                <label for="width">
-                    Ширина
-                    <input type="number" id="width">
+                <label for="tile-width">
+                    Ширина (см)
+                    <input type="number" id="tile-width">
                 </label>
             </div>
             <div>
-                <label for="height-tile">
-                    Высота
-                    <input type="number" id="height-tile">
+                <label for="tile-height">
+                    Высота (см)
+                    <input type="number" id="tile-height">
                 </label>
             </div>
             <div>
-                <span>Площадь одной плитки</span>
-                <span>1234</span>
-                <span>m2</span>
+                <span id="one-tile-area"></span>
+              
             </div>
         </div>
         <div>
-            <label for="area">
+            <label for="tile-area">
                 <h3>Введите нужную площадь</h3>
-                <input type="number" id="area">
-                <span>m2</span>
+                <input type="number" id="tile-area">
+                <span>m²</span>
             </label>
-            <label for="numerosity">
+            <label for="tile-numerosity">
                 <h3>Нужное количество плитки</h3>
-                <input type="number" id="numerosity">
+                <input type="number" id="tile-numerosity">
                 <span>штук</span>
             </label>
         </div>
@@ -64,7 +63,9 @@
                 <span>шт</span>
             </label>
         </div>
+        <input type="submit" onclick="calcArea()">
     </section>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
