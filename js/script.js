@@ -14,7 +14,7 @@ let boxesPlus = document.getElementById('boxes-plus');
 tileArea.onchange = () => {
     calcArea()
     numBox.value = Math.floor(tileNum.value / numInBox.value);
-    boxesPlus.value = Math.ceil(tileNum.value % numInBox.value);
+    boxesPlus.value = tileNum.value % numInBox.value;
 }
 tileNum.onchange = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
@@ -22,7 +22,7 @@ tileNum.onchange = () => {
     // tileNum.value = numInBox.value * numBox.value;
     console.log(Math.ceil(tileNum.value % numInBox.value))
     numBox.value = Math.floor(tileNum.value / numInBox.value)
-    boxesPlus.value = Math.ceil(tileNum.value % numInBox.value);
+    boxesPlus.value = tileNum.value % numInBox.value;
 
 }
 tileWidth.onchange = () => {
@@ -37,21 +37,23 @@ const calcArea = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     oneTileArea.innerText = `Площадь одной плитки ${calcOneTileArea} м²`;
     tileNum.value = Math.ceil(tileArea.value / calcOneTileArea);
-    // console.log('change')
+    numBox.value = Math.floor(tileNum.value / numInBox.value)
+    boxesPlus.value = tileNum.value % numInBox.value;
+
 }
 numInBox.onchange = () => {
-
     numBox.value = Math.floor(tileNum.value / numInBox.value);
-    tileNum.value = numInBox.value * numBox.value;
-    let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    tileArea.value = calcOneTileArea * tileNum.value;
-    console.log(Math.ceil(tileNum.value % numInBox.value));
-    boxesPlus.value = Math.ceil(tileNum.value % numInBox.value);
-
+    boxesPlus.value = tileNum.value % numInBox.value;
 }
 
 numBox.onchange = () => {
     tileNum.value = numInBox.value * numBox.value;
+    let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
+    tileArea.value = calcOneTileArea * tileNum.value;
+}
+
+boxesPlus.onchange = () => {
+    tileNum.value = numInBox.value * numBox.value + +boxesPlus.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = calcOneTileArea * tileNum.value;
 }

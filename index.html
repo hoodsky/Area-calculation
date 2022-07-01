@@ -21,7 +21,7 @@
         </select>
     </section>
     <section class="tile-section">
-        <div>
+        <div class="tile-dimensions">
             <h3>Введите размеры</h3>
             <div>
                 <label for="tile-width">
@@ -31,8 +31,7 @@
                     <button class="number-plus" type="button"
                         onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 </label>
-            </div>
-            <div>
+                <span>x</span>
                 <label for="tile-height">
                     <button class="number-minus" type="button"
                         onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>

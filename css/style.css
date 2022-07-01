@@ -24,6 +24,12 @@ input {
   font-family: 'Source Code Pro', monospace;
   outline: none;
   height: 1.875rem;
+  width: 60%;
+}
+
+label {
+  display: block;
+  width: 50vw;
 }
 
 input:focus {
@@ -37,6 +43,49 @@ input:focus {
 .tile-section {
   background-color: silver;
   padding: 1.25rem 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tile-section .tile-dimensions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tile-section .tile-dimensions h3 {
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.tile-section .tile-dimensions input {
+  width: 20%;
+}
+
+.tile-section .tile-dimensions div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .number-minus,

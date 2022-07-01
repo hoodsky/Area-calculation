@@ -79,6 +79,12 @@ input {
     font-family: 'Source Code Pro', monospace;
     outline: none;
     height: rem(30);
+    width: 60%;
+}
+
+label {
+    display: block;
+    width: 50vw;
 }
 
 input:focus {
@@ -92,6 +98,30 @@ input:focus {
 .tile-section {
     background-color: silver;
     padding: rem(20) rem(10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tile-dimensions {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            display: block;
+            align-self: center;
+        }
+
+        input {
+            width: 20%;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 .number-minus,
