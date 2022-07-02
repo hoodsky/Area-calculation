@@ -18,9 +18,8 @@ tileArea.onchange = () => {
 }
 tileNum.onchange = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    tileArea.value = calcOneTileArea * tileNum.value;
+    tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
     // tileNum.value = numInBox.value * numBox.value;
-    console.log(Math.ceil(tileNum.value % numInBox.value))
     numBox.value = Math.floor(tileNum.value / numInBox.value)
     boxesPlus.value = tileNum.value % numInBox.value;
 
@@ -35,7 +34,7 @@ tileHeight.onchange = () => {
 
 const calcArea = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    oneTileArea.innerText = `Площадь одной плитки ${calcOneTileArea} м²`;
+    oneTileArea.innerText = `Площадь одной плитки ${Math.round(calcOneTileArea * 10000) / 10000} м²`;
     tileNum.value = Math.ceil(tileArea.value / calcOneTileArea);
     numBox.value = Math.floor(tileNum.value / numInBox.value)
     boxesPlus.value = tileNum.value % numInBox.value;
@@ -49,11 +48,19 @@ numInBox.onchange = () => {
 numBox.onchange = () => {
     tileNum.value = numInBox.value * numBox.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    tileArea.value = calcOneTileArea * tileNum.value;
+    tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
 }
 
 boxesPlus.onchange = () => {
     tileNum.value = numInBox.value * numBox.value + +boxesPlus.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    tileArea.value = calcOneTileArea * tileNum.value;
+    tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    if (boxesPlus.value >= numInBox.value) {
+        numBox.value++;
+        boxesPlus.value = 0;
+    }
+    if (boxesPlus.value < 0) {
+        numBox.value--;
+        boxesPlus.value = numInBox.value - 1;
+    }
 }

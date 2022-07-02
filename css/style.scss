@@ -79,7 +79,7 @@ input {
     font-family: 'Source Code Pro', monospace;
     outline: none;
     height: rem(30);
-
+    width: 100px;
 }
 
 label {
@@ -100,7 +100,15 @@ input:focus {
     padding: rem(20) rem(10);
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+
     // align-items: center;
+    div {
+        // border: 1px solid black;
+        min-width: 300px;
+        max-width: 500px;
+    }
 
     .tile-dimensions {
 
@@ -119,8 +127,10 @@ input:focus {
             display: flex;
             align-items: center;
 
+
             label {
-                flex: 1 1 auto;
+                // flex: 1 1 auto;
+                border: 1px solid green;
             }
         }
     }
@@ -130,7 +140,7 @@ input:focus {
 .number-plus {
     height: rem(32);
     border: none;
-    width: rem(30);
+    width: rem(20);
     cursor: pointer;
 }
 

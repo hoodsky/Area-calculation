@@ -27,7 +27,7 @@
                 <label for="tile-width">
                     <button class="number-minus" type="button"
                         onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                    <input min="0" type="number" id="tile-width" placeholder="Ширина (см)" step="5">
+                    <input min="0" type="number" id="tile-width" placeholder="Ширина (см)" step="5" tabindex="1">
                     <button class="number-plus" type="button"
                         onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 </label>
@@ -35,7 +35,7 @@
                 <label for="tile-height">
                     <button class="number-minus" type="button"
                         onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                    <input min="0" type="number" id="tile-height" placeholder="Высота (см)" step="5">
+                    <input min="0" type="number" id="tile-height" placeholder="Высота (см)" step="5" tabindex="2">
                     <button class="number-plus" type="button"
                         onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 </label>
@@ -45,49 +45,55 @@
             </div>
         </div>
         <div>
+            <h3>Введите нужную площадь</h3>
             <label for="tile-area">
-                <h3>Введите нужную площадь</h3>
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                <input min="0" type="number" id="tile-area">
+                <input min="0" type="number" id="tile-area" tabindex="3">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>m²</span>
             </label>
+        </div>
+        <div>
+            <h3>Нужное количество плитки</h3>
             <label for="tile-num">
-                <h3>Нужное количество плитки</h3>
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                <input min="0" type="number" id="tile-num">
+                <input min="0" type="number" id="tile-num" tabindex="4">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>штук</span>
             </label>
         </div>
         <div>
+            <h3>Количество в одной пачке</h3>
             <label for="num-in-box">
-                <h3>Количество в одной пачке</h3>
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                <input min="0" type="number" id="num-in-box">
+                <input min="0" type="number" id="num-in-box" tabindex="5">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>шт</span>
             </label>
+        </div>
+        <div>
+            <h3>Нужно пачек</h3>
             <label for="num-box">
-                <h3>Нужно пачек</h3>
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                <input min="0" type="number" id="num-box">
+                <input min="0" type="number" id="num-box" tabindex="6">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>пачек</span>
             </label>
+        </div>
+        <div>
+            <h3>и плиток</h3>
             <label for="boxes-plus">
-                <h3>и плиток</h3>
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                <input min="0" type="number" id="boxes-plus">
+                <input type="number" id="boxes-plus" tabindex="7">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>плиток</span>
