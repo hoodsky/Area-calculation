@@ -23,23 +23,23 @@
     <section class="tile-section">
         <div class="tile-dimensions">
             <h3>Введите размеры</h3>
-            <div>
-                <label for="tile-width">
-                    <button class="number-minus" type="button"
-                        onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                    <input min="0" type="number" id="tile-width" placeholder="Ширина (см)" step="5" tabindex="1">
-                    <button class="number-plus" type="button"
-                        onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-                </label>
-                <span>x</span>
-                <label for="tile-height">
-                    <button class="number-minus" type="button"
-                        onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                    <input min="0" type="number" id="tile-height" placeholder="Высота (см)" step="5" tabindex="2">
-                    <button class="number-plus" type="button"
-                        onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-                </label>
-            </div>
+
+            <label for="tile-width">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="tile-width" placeholder="Ширина (см)" step="5" tabindex="1">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+            </label>
+            <!-- <span>x</span> -->
+            <label for="tile-height">
+                <button class="number-minus" type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                <input min="0" type="number" id="tile-height" placeholder="Высота (см)" step="5" tabindex="2">
+                <button class="number-plus" type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+            </label>
+
             <div>
                 <span id="one-tile-area"></span>
             </div>
@@ -99,7 +99,7 @@
                 <span>плиток</span>
             </label>
         </div>
-        <input type="submit" onclick="calcArea()">
+        <!-- <input type="submit" onclick="calcArea()"> -->
     </section>
     <script src="../js/script.js"></script>
 </body>
