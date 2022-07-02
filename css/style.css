@@ -24,12 +24,10 @@ input {
   font-family: 'Source Code Pro', monospace;
   outline: none;
   height: 1.875rem;
-  width: 60%;
 }
 
 label {
   display: block;
-  width: 50vw;
 }
 
 input:focus {
@@ -50,9 +48,6 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .tile-section .tile-dimensions {
@@ -63,9 +58,6 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .tile-section .tile-dimensions h3 {
@@ -75,10 +67,6 @@ input:focus {
       align-self: center;
 }
 
-.tile-section .tile-dimensions input {
-  width: 20%;
-}
-
 .tile-section .tile-dimensions div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +74,12 @@ input:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.tile-section .tile-dimensions div label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .number-minus,
