@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap");
 html {
   font-family: 'Source Code Pro', monospace;
+  background-color: #3a3a3a;
+  color: white;
 }
 
 input[type="number"] {
@@ -11,6 +13,8 @@ input[type="number"] {
 
 h1 {
   font-size: 3.125rem;
+  color: #1a6872;
+  text-align: center;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -26,10 +30,12 @@ input[type="number"] {
   padding: 0px 2.25rem;
   border-radius: 2rem;
   height: 2rem;
+  border: 1px solid #1a6872;
 }
 
 input:focus {
-  border: none;
+  border: 1px solid #003640;
+  background-color: #e2ffff;
 }
 
 .input-block {
@@ -41,11 +47,7 @@ input:focus {
   right: 2.25rem;
   bottom: 1.25rem;
   font-size: 0.8em;
-  color: gray;
-}
-
-.change-section {
-  background-color: gray;
+  color: #1a6872;
 }
 
 h3 {
@@ -53,8 +55,8 @@ h3 {
 }
 
 input[type="radio"]:checked {
-  background-color: #187767;
-  border: 1px solid #187767;
+  background-color: #1a6872;
+  border: 1px solid #1a6872;
 }
 
 input[type="radio"] {
@@ -71,7 +73,6 @@ input[type="radio"] {
 }
 
 .tile {
-  background-color: silver;
   display: none;
   padding: 1.25rem 0.625rem;
   display: -webkit-box;
@@ -114,23 +115,30 @@ input[type="radio"] {
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  top: 0.6875rem;
-  background-color: #187767;
+  top: 0.75rem;
+  background-color: #1a6872;
   color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.number-minus:hover,
+.number-plus:hover {
+  background-color: #003640;
 }
 
 .number-minus {
-  left: 0.0625rem;
+  left: 0.125rem;
 }
 
 .number-plus {
-  right: 0.0625rem;
+  right: 0.125rem;
 }
 
 #one-tile-area {
   position: absolute;
   font-size: 0.8em;
   text-align: center;
-  color: #636363;
+  color: #1a6872;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,25 +3,24 @@ let tileHeight = document.getElementById('tile-height'); //высота плит
 let oneTileArea = document.getElementById('one-tile-area'); //площадь одной плитки
 let tileArea = document.getElementById('tile-area'); //общая площадь
 let tileNum = document.getElementById('tile-num'); //количество плитки
-let input = document.querySelectorAll('input'); //
 let numInBox = document.getElementById('num-in-box') //штук в коробке
 let numBox = document.getElementById('num-box'); //количество коробок
 let boxesPlus = document.getElementById('boxes-plus');
-let tileRadio = document.getElementById('tile');
-let tileSection = document.querySelector('.tile');
+// let tileRadio = document.getElementById('tile');
+// let tileSection = document.querySelector('.tile');
 
-tileRadio.addEventListener('change', () => {
-    if (tileRadio.checked) {
-        // tileSection.style.opacity = "1";
-        // tileSection.style.transform = 'scale(1)';
-        // console.log("Checkbox is checked..");
-        // tileSection.style.display = "flex";
-        tileSection.classList.add('active');
-    }
-    else {
-        tileSection.classList.remove('active');
-    }
-})
+// tileRadio.addEventListener('change', () => {
+//     if (tileRadio.checked) {
+//         // tileSection.style.opacity = "1";
+//         // tileSection.style.transform = 'scale(1)';
+//         // console.log("Checkbox is checked..");
+//         // tileSection.style.display = "flex";
+//         tileSection.classList.add('active');
+//     }
+//     else {
+//         tileSection.classList.remove('active');
+//     }
+// })
 
 //input.onchange = () => {
 //  calcArea()

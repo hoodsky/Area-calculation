@@ -52,9 +52,13 @@ $maxWidthContainer: 1200 / 16; //максимальный размер конт�
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap');
 
+$main-color: rgb(26, 104, 114);
+$back-color: rgb(58, 58, 58);
 
 html {
     font-family: 'Source Code Pro', monospace;
+    background-color: $back-color;
+    color: white;
 }
 
 input[type="number"] {
@@ -65,6 +69,8 @@ input[type="number"] {
 
 h1 {
     font-size: rem(50);
+    color: $main-color;
+    text-align: center;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -80,11 +86,13 @@ input[type="number"] {
     padding: 0px rem(36);
     border-radius: rem(32);
     height: rem(32);
+    border: 1px solid $main-color;
 }
 
 
 input:focus {
-    border: none;
+    border: 1px solid $main-color - 50%;
+    background-color: $main-color + 200%;
 }
 
 .input-block {
@@ -95,21 +103,19 @@ input:focus {
         right: rem(36);
         bottom: rem(20);
         font-size: 0.8em;
-        color: gray;
+        color: $main-color;
     }
 }
 
-.change-section {
-    background-color: gray;
-}
+
 
 h3 {
     text-align: center;
 }
 
 input[type="radio"]:checked {
-    background-color: rgb(24, 119, 103);
-    border: 1px solid rgb(24, 119, 103);
+    background-color: $main-color;
+    border: 1px solid $main-color;
 }
 
 input[type="radio"] {
@@ -133,7 +139,6 @@ input[type="radio"] {
 
 
 .tile {
-    background-color: silver;
     display: none;
     padding: rem(20) rem(10);
     display: flex;
@@ -164,22 +169,27 @@ input[type="radio"] {
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    top: rem(11);
-    background-color: rgb(24, 119, 103);
+    top: rem(12);
+    background-color: $main-color;
     color: white;
+    transition: all .5s;
+
+    &:hover {
+        background-color: $main-color - 50%;
+    }
 }
 
 .number-minus {
-    left: rem(1);
+    left: rem(2);
 }
 
 .number-plus {
-    right: rem(1);
+    right: rem(2);
 }
 
 #one-tile-area {
     position: absolute;
     font-size: 0.8em;
     text-align: center;
-    color: rgb(99, 99, 99);
+    color: $main-color;
 }
