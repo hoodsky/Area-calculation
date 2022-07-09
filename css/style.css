@@ -72,10 +72,13 @@ input[type="radio"] {
 
 .tile {
   background-color: silver;
+  display: none;
   padding: 1.25rem 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -90,6 +93,17 @@ input[type="radio"] {
 
 .tile__dimensions {
   margin-bottom: 1.25rem;
+}
+
+.tile.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .number-minus,

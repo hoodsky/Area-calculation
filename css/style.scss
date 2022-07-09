@@ -130,10 +130,15 @@ input[type="radio"] {
 
 }
 
+
+
 .tile {
     background-color: silver;
+    display: none;
     padding: rem(20) rem(10);
     display: flex;
+
+    transform: scale(0);
     flex-direction: column;
     align-items: center;
     opacity: 0;
@@ -141,7 +146,13 @@ input[type="radio"] {
 
     &__dimensions {
         margin-bottom: rem(20);
+    }
 
+    &.active {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 1s ease;
     }
 }
 

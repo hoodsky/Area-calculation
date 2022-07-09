@@ -12,8 +12,14 @@ let tileSection = document.querySelector('.tile');
 
 tileRadio.addEventListener('change', () => {
     if (tileRadio.checked) {
-        tileSection.style.opacity = "1";
-        console.log("Checkbox is checked..");
+        // tileSection.style.opacity = "1";
+        // tileSection.style.transform = 'scale(1)';
+        // console.log("Checkbox is checked..");
+        // tileSection.style.display = "flex";
+        tileSection.classList.add('active');
+    }
+    else {
+        tileSection.classList.remove('active');
     }
 })
 
