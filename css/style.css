@@ -3,6 +3,7 @@ html {
   font-family: 'Source Code Pro', monospace;
   background-color: #3a3a3a;
   color: white;
+  width: 100vw;
 }
 
 input[type="number"] {
@@ -12,7 +13,7 @@ input[type="number"] {
 }
 
 h1 {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   color: #1a6872;
   text-align: center;
 }
