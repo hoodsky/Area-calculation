@@ -7,6 +7,15 @@ let input = document.querySelectorAll('input'); //
 let numInBox = document.getElementById('num-in-box') //штук в коробке
 let numBox = document.getElementById('num-box'); //количество коробок
 let boxesPlus = document.getElementById('boxes-plus');
+let tileRadio = document.getElementById('tile');
+let tileSection = document.querySelector('.tile');
+
+tileRadio.addEventListener('change', () => {
+    if (tileRadio.checked) {
+        tileSection.style.opacity = "1";
+        console.log("Checkbox is checked..");
+    }
+})
 
 //input.onchange = () => {
 //  calcArea()
