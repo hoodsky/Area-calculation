@@ -55,13 +55,12 @@ $maxWidthContainer: 1200 / 16; //максимальный размер конт�
 $main-color: rgb(26, 104, 114);
 $back-color: rgb(58, 58, 58);
 
-html {
+body {
     font-family: 'Source Code Pro', monospace;
-    background-color: $back-color;
+    background-color: #3a3a3a;
     color: white;
     width: 100vw;
-    // height: 100vh;
-
+    animation: start 1s ease;
 }
 
 input[type="number"] {
@@ -74,6 +73,7 @@ h1 {
     font-size: rem(40);
     color: $main-color;
     text-align: center;
+    margin: 10px 0;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -193,6 +193,19 @@ input[type="radio"] {
 #one-tile-area {
     position: absolute;
     font-size: 0.8em;
-    text-align: center;
-    color: $main-color;
+    // text-align: center;
+    color: $main-color + 40%;
+
+}
+
+@keyframes start {
+    from {
+        opacity: 0;
+        margin-top: -100px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
 }
