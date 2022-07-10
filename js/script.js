@@ -12,6 +12,7 @@ let boxesPlus = document.getElementById('boxes-plus');
 let input = document.querySelectorAll('input[type=number]');
 
 
+
 input.forEach(i => {
     i.addEventListener('focus', () => {
         i.select();
