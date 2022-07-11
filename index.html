@@ -44,7 +44,7 @@
     </section> -->
     <section class="tile active">
         <h3>Введите размеры плитки</h3>
-        <div class="tile__dimensions">
+        <div class="tile__dimensions padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
@@ -61,7 +61,7 @@
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>см</span>
             </div>
-            <span id="one-tile-area" class="subtext">Площадь одной плитки 0.02 м²</span>
+            <div class="subtext">Площадь одной плитки <span id="one-tile-area">0.02</span> м²</div>
         </div>
         <h3>Введите нужную площадь</h3>
         <div class="tile__square">
@@ -75,7 +75,7 @@
             </div>
         </div>
         <h3>Нужное количество плитки</h3>
-        <div class="tile__amount">
+        <div class="tile__amount padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
@@ -84,10 +84,10 @@
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>шт</span>
             </div>
-            <span></span>
+            <div class="subtext">Точная площадь <span id="tile-num-area">10</span> м²</div>
         </div>
         <h3>Количество в одной пачке</h3>
-        <div class="tile__num-in-box">
+        <div class="tile__num-in-box padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
@@ -96,6 +96,7 @@
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                 <span>шт</span>
             </div>
+            <div class="subtext">Площадь в пачке <span id="num-in-box-area">0.14</span> м²</div>
         </div>
         <h3>Нужно пачек</h3>
         <div class="tile__num-boxes">

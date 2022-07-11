@@ -8,6 +8,8 @@ let tileNum = document.getElementById('tile-num'); //количество пли
 let numInBox = document.getElementById('num-in-box') //штук в коробке
 let numBox = document.getElementById('num-box'); //количество коробок
 let boxesPlus = document.getElementById('boxes-plus');
+let tileNumArea = document.getElementById('tile-num-area'); //точная площадь нужного количества плиток (span)
+let numInBoxArea = document.getElementById('num-in-box-area'); //точная площадь в одной пачке
 
 let input = document.querySelectorAll('input[type=number]');
 
@@ -41,11 +43,13 @@ input.forEach(i => {
 //}
 const calcOneTile = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
-    oneTileArea.innerText = `Площадь одной плитки ${Math.round(calcOneTileArea * 10000) / 10000} м²`;
+    oneTileArea.innerText = Math.round(calcOneTileArea * 10000) / 10000;
 };
 const calcArea = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileNum.value = Math.ceil(tileArea.value / calcOneTileArea);
+
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
 };
 
 const calcNumBox = () => {
@@ -68,55 +72,77 @@ tileArea.onchange = () => {
 tileNum.addEventListener('input', () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
     calcNumBox();
 });
 
 tileNum.onchange = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
     calcNumBox();
 
 }
 tileWidth.onchange = () => {
     calcArea();
     calcOneTile();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
+
 };
 
 tileWidth.addEventListener('input', () => {
     calcArea();
     calcOneTile();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
 
 });
 
 tileHeight.onchange = () => {
     calcArea();
     calcOneTile();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
 
 };
 
 tileHeight.addEventListener('input', () => {
     calcArea();
     calcOneTile();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
+
 })
 
 numInBox.onchange = () => {
     calcNumBox();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
 };
+
+numInBox.addEventListener('input', () => {
+    calcNumBox();
+    numInBoxArea.innerHTML = Math.round(numInBox.value * ((tileWidth.value / 100) * (tileHeight.value / 100)) * 1000) / 1000
+})
 
 numBox.onchange = () => {
     tileNum.value = numInBox.value * numBox.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
 };
 numBox.addEventListener('input', () => {
     tileNum.value = numInBox.value * numBox.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
 });
 boxesPlus.addEventListener('input', () => {
     tileNum.value = numInBox.value * numBox.value + +boxesPlus.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
     if (boxesPlus.value >= numInBox.value) {
         numBox.value++;
         boxesPlus.value = 0;
@@ -130,6 +156,8 @@ boxesPlus.onchange = () => {
     tileNum.value = numInBox.value * numBox.value + +boxesPlus.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
+    tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
+
     if (boxesPlus.value >= numInBox.value) {
         numBox.value++;
         boxesPlus.value = 0;
