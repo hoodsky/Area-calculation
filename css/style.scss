@@ -53,11 +53,11 @@ $maxWidthContainer: 1200 / 16; //максимальный размер конт�
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap');
 
 $main-color: #1a6872;
-$back-color: rgb(58, 58, 58);
+$back-color: rgb(43, 43, 43);
 
 body {
     font-family: 'Source Code Pro', monospace;
-    background-color: #3a3a3a;
+    background-color: $back-color;
     color: white;
     width: 100vw;
     animation: start 1s ease;
@@ -110,8 +110,6 @@ input:focus {
     }
 }
 
-
-
 h3 {
     text-align: center;
 }
@@ -132,11 +130,7 @@ input[type="radio"] {
 
     border: 1px solid silver;
     transition: 0.2s all linear;
-    // margin-right: 5px;
     cursor: pointer;
-    // position: relative;
-    // top: 4px;
-
 }
 
 
@@ -190,13 +184,13 @@ input[type="radio"] {
     right: rem(2);
 }
 
-#one-tile-area {
-    position: absolute;
+.subtext {
     font-size: 0.8em;
-    // text-align: center;
     color: $main-color + 40%;
-
+    text-align: center;
 }
+
+#one-tile-area {}
 
 @keyframes start {
     from {
