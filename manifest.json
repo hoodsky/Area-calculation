@@ -2,8 +2,10 @@
   "name": "Area calculation",
   "short_name": "Area calculation",
   "lang": "uk-UA",
-  "start_url": "https://area-calculation.netlify.app/",
+  "start_url": "/",
   "display": "standalone",
+  "background_color": "#313131",
+ "theme_color": "#61A2AE",
   "icons": [
   {
    "src": "\/icons\/android-icon-36x36.png",
@@ -41,5 +43,15 @@
    "type": "image\/png",
    "density": "4.0"
   }
+      {
+      "src": "\/icons\/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "\/icons\/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
  ]
 }
