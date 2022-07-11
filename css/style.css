@@ -147,7 +147,7 @@ input[type="radio"] {
 
 @-webkit-keyframes start {
   from {
-    opacity: 0;
+    opacity: .5;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
@@ -160,7 +160,7 @@ input[type="radio"] {
 
 @keyframes start {
   from {
-    opacity: 0;
+    opacity: .5;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
