@@ -16,7 +16,7 @@ input[type="number"] {
 
 h1 {
   font-size: 2.5rem;
-  color: #447d85;
+  color: #61A2AE;
   text-align: center;
   margin: 1.875rem 0 0.625rem 0;
 }
@@ -34,11 +34,11 @@ input[type="number"] {
   padding: 0px 2.25rem;
   border-radius: 2rem;
   height: 2rem;
-  border: 1px solid #447d85;
+  border: 1px solid #61A2AE;
 }
 
 input:focus {
-  border: 1px solid #124b53;
+  border: 1px solid #2f707c;
   background-color: white;
 }
 
@@ -51,7 +51,7 @@ input:focus {
   right: 2.25rem;
   bottom: 1.25rem;
   font-size: 0.8em;
-  color: #447d85;
+  color: #61A2AE;
 }
 
 h3 {
@@ -59,8 +59,8 @@ h3 {
 }
 
 input[type="radio"]:checked {
-  background-color: #447d85;
-  border: 1px solid #447d85;
+  background-color: #61A2AE;
+  border: 1px solid #61A2AE;
 }
 
 input[type="radio"] {
@@ -120,7 +120,7 @@ input[type="radio"] {
   border-radius: 50%;
   position: absolute;
   top: 0.75rem;
-  background-color: #447d85;
+  background-color: #61A2AE;
   color: white;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -128,7 +128,7 @@ input[type="radio"] {
 
 .number-minus:hover,
 .number-plus:hover {
-  background-color: #124b53;
+  background-color: #2f707c;
 }
 
 .number-minus {
@@ -141,7 +141,7 @@ input[type="radio"] {
 
 .subtext {
   font-size: 0.8em;
-  color: #94cdd5;
+  color: #b1f2fe;
   text-align: center;
 }
 
