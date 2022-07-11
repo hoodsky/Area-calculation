@@ -3,7 +3,7 @@
   "short_name": "Area calculation",
   "lang": "uk-UA",
   "start_url": "https://area-calculation.netlify.app/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "icons": [
   {
    "src": "\/icons\/android-icon-36x36.png",
