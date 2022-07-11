@@ -167,12 +167,12 @@ input[type="radio"] {
     border-radius: 50%;
     position: absolute;
     top: rem(12);
-    background-color: $main-color;
+    background-color: $main-color - 50%;
     color: white;
     transition: all .5s;
 
     &:hover {
-        background-color: $main-color - 50%;
+        background-color: $main-color - 100%;
     }
 }
 

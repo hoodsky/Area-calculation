@@ -120,7 +120,7 @@ input[type="radio"] {
   border-radius: 50%;
   position: absolute;
   top: 0.75rem;
-  background-color: #61A2AE;
+  background-color: #2f707c;
   color: white;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -128,7 +128,7 @@ input[type="radio"] {
 
 .number-minus:hover,
 .number-plus:hover {
-  background-color: #2f707c;
+  background-color: #003e4a;
 }
 
 .number-minus {
