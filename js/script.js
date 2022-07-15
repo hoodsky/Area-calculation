@@ -156,11 +156,11 @@ boxesPlus.addEventListener('input', () => {
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
     tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
 
-    if (boxesPlus.value >= numInBox.value) {
+    if (+boxesPlus.value >= +numInBox.value) {
         numBox.value++;
         boxesPlus.value = 0;
     }
-    if (boxesPlus.value < 0) {
+    if (+boxesPlus.value < 0) {
         numBox.value--;
         boxesPlus.value = numInBox.value - 1;
     }
@@ -171,11 +171,11 @@ boxesPlus.onchange = () => {
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
     tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
 
-    if (boxesPlus.value >= numInBox.value) {
+    if (+boxesPlus.value >= +numInBox.value) {
         numBox.value++;
         boxesPlus.value = 0;
     }
-    if (boxesPlus.value < 0) {
+    if (+boxesPlus.value < 0) {
         numBox.value--;
         boxesPlus.value = numInBox.value - 1;
     }
