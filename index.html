@@ -52,16 +52,17 @@
 </head>
 
 <body>
-    <h1 class="title">Area calculation</h1>
-    <!-- <section class="change-section">
-        <h2>Выберите нужное</h2>
-        <label for="tile"><input checked class="radio__tile" type="radio" name="type" value="tile"
-                id="tile">Плитка</label>
-        <label for="laminate"><input type="radio" value="laminate" name="type" id="laminate">Ламинат</label>
-        <label for="roll"><input type="radio" value="roll" name="type" id="roll">Рулонные покрытия</label>
-    </section> -->
+    <div class="title">
+        <h1>Area calculation</h1>
+    </div>
+
+    <nav class="nav__menu">
+        <div>Плитка</div>
+        <div>Ламинат</div>
+        <div>Рулонные покрытия</div>
+    </nav>
     <section class="tile active">
-        <h3>Введите размеры плитки</h3>
+        <h2>Введите размеры плитки</h2>
         <div class="tile__dimensions padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -81,7 +82,7 @@
             </div>
             <div class="subtext">Площадь одной плитки <span id="one-tile-area">0.02</span> м²</div>
         </div>
-        <h3>Введите нужную площадь</h3>
+        <h2>Введите нужную площадь</h2>
         <div class="tile__square">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -93,7 +94,7 @@
                 <span>m²</span>
             </div>
         </div>
-        <h3>Нужное количество плитки</h3>
+        <h2>Нужное количество плитки</h2>
         <div class="tile__amount padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -106,7 +107,7 @@
             </div>
             <div class="subtext">Точная площадь <span id="tile-num-area">10</span> м²</div>
         </div>
-        <h3>Количество в одной пачке</h3>
+        <h2>Количество в одной пачке</h2>
         <div class="tile__num-in-box padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -118,7 +119,7 @@
             </div>
             <div class="subtext">Площадь в пачке <span id="num-in-box-area">0.14</span> м²</div>
         </div>
-        <h3>Нужно пачек</h3>
+        <h2>Нужно пачек</h2>
         <div class="tile__num-boxes">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -129,7 +130,7 @@
                 <span>шт</span>
             </div>
         </div>
-        <h3>и плиток</h3>
+        <h2>и плиток</h2>
         <div class="tile__boxes-plus">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -142,7 +143,8 @@
         </div>
         <!-- <input type="submit" onclick="calcArea()"> -->
     </section>
-    <script src="../js/script.js">    </script>
+
+    <script src="../js/script.js"></script>
 
 </body>
 

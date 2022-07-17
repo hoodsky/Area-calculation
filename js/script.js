@@ -23,9 +23,7 @@ let numBox = document.getElementById('num-box'); //количество коро
 let boxesPlus = document.getElementById('boxes-plus');
 let tileNumArea = document.getElementById('tile-num-area'); //точная площадь нужного количества плиток (span)
 let numInBoxArea = document.getElementById('num-in-box-area'); //точная площадь в одной пачке
-
 let input = document.querySelectorAll('input[type=number]');
-
 
 
 input.forEach(i => {
