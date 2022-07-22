@@ -13,17 +13,17 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-let tileWidth = document.getElementById('tile-width'); //ширина плитки
-let tileHeight = document.getElementById('tile-height'); //высота плитки
-let oneTileArea = document.getElementById('one-tile-area'); //площадь одной плитки
-let tileArea = document.getElementById('tile-area'); //общая площадь
-let tileNum = document.getElementById('tile-num'); //количество плитки
-let numInBox = document.getElementById('num-in-box') //штук в коробке
-let numBox = document.getElementById('num-box'); //количество коробок
-let boxesPlus = document.getElementById('boxes-plus');
-let tileNumArea = document.getElementById('tile-num-area'); //точная площадь нужного количества плиток (span)
-let numInBoxArea = document.getElementById('num-in-box-area'); //точная площадь в одной пачке
-let input = document.querySelectorAll('input[type=number]');
+const tileWidth = document.getElementById('tile-width'); //ширина плитки
+const tileHeight = document.getElementById('tile-height'); //высота плитки
+const oneTileArea = document.getElementById('one-tile-area'); //площадь одной плитки
+const tileArea = document.getElementById('tile-area'); //общая площадь
+const tileNum = document.getElementById('tile-num'); //количество плитки
+const numInBox = document.getElementById('num-in-box') //штук в коробке
+const numBox = document.getElementById('num-box'); //количество коробок
+const boxesPlus = document.getElementById('boxes-plus');
+const tileNumArea = document.getElementById('tile-num-area'); //точная площадь нужного количества плиток (span)
+const numInBoxArea = document.getElementById('num-in-box-area'); //точная площадь в одной пачке
+const input = document.querySelectorAll('input[type=number]');
 
 
 input.forEach(i => {
