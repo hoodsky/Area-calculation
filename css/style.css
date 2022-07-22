@@ -134,11 +134,13 @@ input[type="radio"] {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-
-.number-minus:hover,
+@media(hover: hover) and (pointer: fine) {
+    .number-minus:hover,
 .number-plus:hover {
-  background-color: #003e4a;
+        background-color: $main-color - 100%;
+    }
 }
+
 
 .number-minus {
   left: 0.125rem;
