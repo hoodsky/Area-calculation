@@ -177,10 +177,19 @@ input[type="radio"] {
     color: white;
     transition: all .5s;
 
-    &:hover {
-        background-color: $main-color - 100%;
+ //   &:hover {
+   //     background-color: $main-color - 100%;
+ //   }
+}
+
+
+@media(hover: hover) and (pointer: fine) {
+    .number-minus:hover,
+.number-plus:hover {
+        background-color:  $main-color - 100%;;
     }
 }
+
 
 .number-minus {
     left: rem(2);
