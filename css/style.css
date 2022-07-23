@@ -137,7 +137,7 @@ input[type="radio"] {
 @media(hover: hover) and (pointer: fine) {
     .number-minus:hover,
 .number-plus:hover {
-        background-color: $main-color - 100%;
+        background-color: rgba(26,56,62,1);
     }
 }
 
