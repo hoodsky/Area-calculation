@@ -65,12 +65,6 @@ body {
     animation: start .5s ease;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-    appearance: textfield;
-}
-
 button,
 button:active,
 button:focus {
@@ -83,13 +77,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
     border: none;
     margin: rem(10) 0;
     font-family: 'Source Code Pro', monospace;
     outline: none;
-    padding: 0px rem(36);
-    border-radius: rem(32);
-    height: rem(32);
+    padding: 0px rem(44);
+    border-radius: rem(40);
+    height: rem(40);
     border: 1px solid $main-color;
 }
 
@@ -104,8 +101,8 @@ input:focus {
 
     span {
         position: absolute;
-        right: rem(36);
-        bottom: rem(20);
+        right: rem(44);
+        bottom: rem(24);
         font-size: 0.8em;
         color: $main-color - 50%;
     }
@@ -171,13 +168,13 @@ input[type="radio"] {
 
 .number-minus,
 .number-plus {
-    height: rem(30);
+    height: rem(36);
     border: none;
-    width: rem(30);
+    width: rem(36);
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    top: rem(12);
+    top: rem(13);
     background-color: $main-color - 50%;
     color: white;
     transition: all .5s;
@@ -187,8 +184,6 @@ input[type="radio"] {
     }
 }
 
-
-
 @media(hover: hover) and (pointer: fine) {
 
     .number-minus:hover,
@@ -196,7 +191,6 @@ input[type="radio"] {
         background-color: $main-color - 100%;
     }
 }
-
 
 .number-minus {
     left: rem(2);
