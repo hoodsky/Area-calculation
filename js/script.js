@@ -32,26 +32,6 @@ input.forEach(i => {
     })
 })
 
-
-// let tileRadio = document.getElementById('tile');
-// let tileSection = document.querySelector('.tile');
-
-// tileRadio.addEventListener('change', () => {
-//     if (tileRadio.checked) {
-//         // tileSection.style.opacity = "1";
-//         // tileSection.style.transform = 'scale(1)';
-//         // console.log("Checkbox is checked..");
-//         // tileSection.style.display = "flex";
-//         tileSection.classList.add('active');
-//     }
-//     else {
-//         tileSection.classList.remove('active');
-//     }
-// })
-
-//input.onchange = () => {
-//  calcArea()
-//}
 const calcOneTile = () => {
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     oneTileArea.innerText = Math.round(calcOneTileArea * 10000) / 10000;
