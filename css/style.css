@@ -4,14 +4,20 @@ body {
   background-color: #313131;
   color: white;
   width: 100vw;
-  -webkit-animation: start 1s ease;
-          animation: start 1s ease;
+  -webkit-animation: start .5s ease;
+          animation: start .5s ease;
 }
 
 input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -134,13 +140,18 @@ input[type="radio"] {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-@media(hover: hover) and (pointer: fine) {
-    .number-minus:hover,
-.number-plus:hover {
-        background-color: rgba(26,56,62,1);
-    }
+
+.number-minus:active,
+.number-plus:active {
+  background-color: #003e4a;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .number-minus:hover,
+  .number-plus:hover {
+    background-color: #003e4a;
+  }
+}
 
 .number-minus {
   left: 0.125rem;
