@@ -115,14 +115,16 @@ numInBox.addEventListener('input', () => {
 })
 
 numBox.onchange = () => {
-    tileNum.value = numInBox.value * numBox.value;
+      tileNum.value = (numInBox.value * numBox.value) + +boxesPlus.value;
+ //   tileNum.value = numInBox.value * numBox.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
     tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
 
 };
 numBox.addEventListener('input', () => {
-    tileNum.value = numInBox.value * numBox.value;
+        tileNum.value = (numInBox.value * numBox.value) + +boxesPlus.value;
+ //   tileNum.value = numInBox.value * numBox.value;
     let calcOneTileArea = (tileWidth.value / 100) * (tileHeight.value / 100);
     tileArea.value = Math.round((calcOneTileArea * tileNum.value) * 100) / 100;
     tileNumArea.innerHTML = Math.round((calcOneTileArea * tileNum.value) * 1000) / 1000;
