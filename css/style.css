@@ -28,14 +28,12 @@ input[type='number'] {
   font-family: 'Source Code Pro', monospace;
   outline: none;
   padding: 0px 2.75rem;
-  border-radius: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid #61a2ae;
+  border-radius: 2.625rem;
+  height: 2.625rem;
 }
 
 input:focus {
-  border: 1px solid #2f707c;
-  background-color: white;
+  background-color: #f7ffff;
 }
 
 .input-block {
@@ -123,15 +121,55 @@ input[type='radio'] {
   padding-bottom: 0.875rem;
 }
 
+.number-minus {
+  border-radius: 50% 0 0 50%;
+  left: -0.0625rem;
+}
+
+.number-minus::before {
+  content: '';
+  background-color: #ffffff;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  left: 12px;
+  top: calc(50% - 1px);
+}
+
+.number-plus {
+  border-radius: 0 50% 50% 0;
+  right: -0.0625rem;
+}
+
+.number-plus::before {
+  content: '';
+  background-color: #ffffff;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 1px);
+}
+
+.number-plus::after {
+  content: '';
+  background-color: #ffffff;
+  width: 2px;
+  height: 12px;
+  position: absolute;
+  right: 17px;
+  top: calc(50% - 6px);
+}
+
 .number-minus,
 .number-plus {
-  height: 2.25rem;
+  font-size: 1.875rem;
+  height: 2.625rem;
   border: none;
   width: 2.25rem;
   cursor: pointer;
-  border-radius: 50%;
   position: absolute;
-  top: 0.8125rem;
+  top: 0.625rem;
   background-color: #2f707c;
   color: white;
   -webkit-transition: all 0.5s;
@@ -148,14 +186,6 @@ input[type='radio'] {
   .number-plus:hover {
     background-color: #003e4a;
   }
-}
-
-.number-minus {
-  left: 0.125rem;
-}
-
-.number-plus {
-  right: 0.125rem;
 }
 
 .subtext {

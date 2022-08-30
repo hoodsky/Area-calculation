@@ -91,14 +91,14 @@ input[type='number'] {
   font-family: 'Source Code Pro', monospace;
   outline: none;
   padding: 0px rem(44);
-  border-radius: rem(40);
-  height: rem(40);
-  border: 1px solid $main-color;
+  border-radius: rem(42);
+  height: rem(42);
+  // border: 1px solid $main-color;
 }
 
 input:focus {
-  border: 1px solid $main-color - 50%;
-  background-color: $main-color + 200%;
+  // border: 1px solid $main-color - 50%;
+  background-color: $main-color + 150%;
 }
 
 .input-block {
@@ -173,15 +173,53 @@ input[type='radio'] {
   padding-bottom: rem(14);
 }
 
+.number {
+  &-minus {
+    border-radius: 50% 0 0 50%;
+    left: rem(-1);
+    &::before {
+      content: '';
+      background-color: #ffffff;
+      width: 12px;
+      height: 2px;
+      position: absolute;
+      left: 12px;
+      top: calc(50% - 1px);
+    }
+  }
+  &-plus {
+    border-radius: 0 50% 50% 0;
+    right: rem(-1);
+    &::before {
+      content: '';
+      background-color: #ffffff;
+      width: 12px;
+      height: 2px;
+      position: absolute;
+      right: 12px;
+      top: calc(50% - 1px);
+    }
+    &::after {
+      content: '';
+      background-color: #ffffff;
+      width: 2px;
+      height: 12px;
+      position: absolute;
+      right: 17px;
+      top: calc(50% - 6px);
+    }
+  }
+}
 .number-minus,
 .number-plus {
-  height: rem(36);
+  font-size: rem(30);
+  height: rem(42);
   border: none;
   width: rem(36);
   cursor: pointer;
-  border-radius: 50%;
+  // border-radius: 50%;
   position: absolute;
-  top: rem(13);
+  top: rem(10);
   background-color: $main-color - 50%;
   color: white;
   transition: all 0.5s;
@@ -196,14 +234,6 @@ input[type='radio'] {
   .number-plus:hover {
     background-color: $main-color - 100%;
   }
-}
-
-.number-minus {
-  left: rem(2);
-}
-
-.number-plus {
-  right: rem(2);
 }
 
 .subtext {
