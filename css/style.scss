@@ -1,20 +1,20 @@
 //TO%
 @function prc($pxOne, $pxTwo) {
-    $result: ($pxOne/$pxTwo)*100%;
-    @return $result;
+  $result: ($pxOne/$pxTwo) * 100%;
+  @return $result;
 }
 
 //REM
 @function rem($px) {
-    $result: ($px/16)+rem;
-    @return $result;
+  $result: ($px/16) + rem;
+  @return $result;
 }
 
 //EM
 
 @function em($px) {
-    $result: ($px/16)+rem;
-    @return $result;
+  $result: ($px/16) + rem;
+  @return $result;
 }
 
 // адаптивное свойство
@@ -22,198 +22,204 @@ $maxWidth: 1920 / 16; //максимальный размер экрана (px)
 $maxWidthContainer: 1200 / 16; //максимальный размер контейнера (px)
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
-    $addSize: ($startSize / 16)- ($minSize / 16);
+  $addSize: ($startSize / 16)- ($minSize / 16);
 
-    @if $type==1 {
-        //Только если меньше контейнера
-        #{$property}: ($startSize / 16) + rem;
+  @if $type==1 {
+    //Только если меньше контейнера
+    #{$property}: ($startSize / 16) + rem;
 
-        @media (max-width: #{$maxWidthContainer + rem}) {
-            #{$property}: calc(#{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthContainer - 20}));
-        }
+    @media (max-width: #{$maxWidthContainer + rem}) {
+      #{$property}: calc(
+        #{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthContainer -
+              20})
+      );
     }
+  } @else if $type==2 {
+    //Только если больше контейнера
+    #{$property}: ($startSize / 16) + rem;
 
-    @else if $type==2 {
-        //Только если больше контейнера
-        #{$property}: ($startSize / 16) + rem;
-
-        @media (min-width: #{$maxWidthContainer + rem}) {
-            #{$property}: calc(#{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidth - 20}));
-        }
+    @media (min-width: #{$maxWidthContainer + rem}) {
+      #{$property}: calc(
+        #{($minSize / 16) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidth -
+              20})
+      );
     }
-
-    @else {
-        //Всегда
-        #{$property}: calc(#{($minSize /16 ) + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidth - 20}));
-    }
+  } @else {
+    //Всегда
+    #{$property}: calc(
+      #{($minSize / 16) +
+        rem} +
+        #{$addSize} *
+        ((100vw - 20rem) / #{$maxWidth - 20})
+    );
+  }
 }
 
 //@include adaptiv-value("значение", начальный размер, конечный размер, тип(1-меньше контейнера, 2-больше, 0-всегда))
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap');
 
-$main-color: #61A2AE;
+$main-color: #61a2ae;
 $back-color: #313131;
 $font-color: #ffffff;
 
-
 body {
-    font-family: 'Source Code Pro', monospace;
-    background-color: $back-color;
-    color: $font-color;
-    width: 100vw;
-    animation: start .5s ease;
+  font-family: 'Source Code Pro', monospace;
+  background-color: $back-color;
+  color: $font-color;
+  width: 100vw;
+  animation: start 0.5s ease;
 }
 
 button,
 button:active,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    display: none;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  display: none;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-    appearance: textfield;
-    border: none;
-    margin: rem(10) 0;
-    font-family: 'Source Code Pro', monospace;
-    outline: none;
-    padding: 0px rem(44);
-    border-radius: rem(40);
-    height: rem(40);
-    border: 1px solid $main-color;
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  border: none;
+  margin: rem(10) 0;
+  font-family: 'Source Code Pro', monospace;
+  outline: none;
+  padding: 0px rem(44);
+  border-radius: rem(40);
+  height: rem(40);
+  border: 1px solid $main-color;
 }
-
 
 input:focus {
-    border: 1px solid $main-color - 50%;
-    background-color: $main-color + 200%;
+  border: 1px solid $main-color - 50%;
+  background-color: $main-color + 200%;
 }
 
 .input-block {
-    position: relative;
+  position: relative;
 
-    span {
-        position: absolute;
-        right: rem(44);
-        bottom: rem(24);
-        font-size: 0.8em;
-        color: $main-color - 50%;
-    }
+  span {
+    position: absolute;
+    right: rem(44);
+    bottom: rem(24);
+    font-size: 0.8em;
+    color: $main-color - 50%;
+  }
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-input[type="radio"]:checked {
-    background-color: $main-color;
-    border: 1px solid $main-color;
+input[type='radio']:checked {
+  background-color: $main-color;
+  border: 1px solid $main-color;
 }
 
-input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 50%;
-    width: rem(18);
-    height: rem(18);
-    border: 1px solid silver;
-    transition: 0.2s all linear;
-    cursor: pointer;
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: rem(18);
+  height: rem(18);
+  border: 1px solid silver;
+  transition: 0.2s all linear;
+  cursor: pointer;
 }
 
 .title {
-    transition: all .3s;
-    z-index: 5;
-    padding: 20px 20px 0 20px;
+  transition: all 0.3s;
+  z-index: 5;
+  padding: 20px 20px 0 20px;
 
-    h1 {
-        font-size: rem(40);
-        color: $main-color;
-        transition: all .3s;
-        text-align: center;
-    }
-
+  h1 {
+    font-size: rem(40);
+    color: $main-color;
+    transition: all 0.3s;
+    text-align: center;
+  }
 }
 
 .tile {
-    display: none;
-    padding: rem(20) rem(10);
-    display: flex;
-    transform: scale(0);
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: all 1s ease;
-    margin-bottom: 50px;
+  display: none;
+  padding: rem(20) rem(10);
+  display: flex;
+  transform: scale(0);
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s ease;
+  margin-bottom: 50px;
 
-    &.active {
-        display: flex;
-        opacity: 1;
-        transform: scale(1);
-        transition: all 1s ease;
-    }
+  &.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease;
+  }
+
+  &__dimensions {
+  }
 }
 
 .padding {
-    padding-bottom: rem(14);
+  padding-bottom: rem(14);
 }
 
 .number-minus,
 .number-plus {
-    height: rem(36);
-    border: none;
-    width: rem(36);
-    cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
-    top: rem(13);
-    background-color: $main-color - 50%;
-    color: white;
-    transition: all .5s;
+  height: rem(36);
+  border: none;
+  width: rem(36);
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: rem(13);
+  background-color: $main-color - 50%;
+  color: white;
+  transition: all 0.5s;
 
-    &:active {
-        background-color: $main-color - 100%;
-    }
+  &:active {
+    background-color: $main-color - 100%;
+  }
 }
 
-@media(hover: hover) and (pointer: fine) {
-
-    .number-minus:hover,
-    .number-plus:hover {
-        background-color: $main-color - 100%;
-    }
+@media (hover: hover) and (pointer: fine) {
+  .number-minus:hover,
+  .number-plus:hover {
+    background-color: $main-color - 100%;
+  }
 }
 
 .number-minus {
-    left: rem(2);
+  left: rem(2);
 }
 
 .number-plus {
-    right: rem(2);
+  right: rem(2);
 }
 
 .subtext {
-    font-size: 0.8em;
-    color: $main-color + 80%;
-    text-align: center;
+  font-size: 0.8em;
+  color: $main-color + 80%;
+  text-align: center;
 }
 
 @keyframes start {
-    from {
-        opacity: .5;
-        transform: scale(.9);
-    }
+  from {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

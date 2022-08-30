@@ -4,8 +4,8 @@ body {
   background-color: #313131;
   color: #ffffff;
   width: 100vw;
-  -webkit-animation: start .5s ease;
-          animation: start .5s ease;
+  -webkit-animation: start 0.5s ease;
+          animation: start 0.5s ease;
 }
 
 button,
@@ -14,12 +14,12 @@ button:focus {
   outline: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
@@ -30,7 +30,7 @@ input[type="number"] {
   padding: 0px 2.75rem;
   border-radius: 2.5rem;
   height: 2.5rem;
-  border: 1px solid #61A2AE;
+  border: 1px solid #61a2ae;
 }
 
 input:focus {
@@ -54,12 +54,12 @@ h2 {
   text-align: center;
 }
 
-input[type="radio"]:checked {
-  background-color: #61A2AE;
-  border: 1px solid #61A2AE;
+input[type='radio']:checked {
+  background-color: #61a2ae;
+  border: 1px solid #61a2ae;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -73,17 +73,17 @@ input[type="radio"] {
 }
 
 .title {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   z-index: 5;
   padding: 20px 20px 0 20px;
 }
 
 .title h1 {
   font-size: 2.5rem;
-  color: #61A2AE;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  color: #61a2ae;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   text-align: center;
 }
 
@@ -134,8 +134,8 @@ input[type="radio"] {
   top: 0.8125rem;
   background-color: #2f707c;
   color: white;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .number-minus:active,
@@ -166,7 +166,7 @@ input[type="radio"] {
 
 @-webkit-keyframes start {
   from {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
@@ -179,7 +179,7 @@ input[type="radio"] {
 
 @keyframes start {
   from {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
