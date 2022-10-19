@@ -131,8 +131,27 @@ input[type='radio'] {
   padding-bottom: 0.875rem;
 }
 
+.number-minus,
+.number-plus {
+  height: 2.625rem;
+  border: none;
+  width: 2.25rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.625rem;
+  background-color: #2f707c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.number-minus:active,
+.number-plus:active {
+  background-color: #003e4a;
+}
+
 .number-minus {
   border-radius: 50% 0 0 50%;
+  position: absolute;
   left: -2.25rem;
 }
 
@@ -148,6 +167,7 @@ input[type='radio'] {
 
 .number-plus {
   border-radius: 0 50% 50% 0;
+  position: absolute;
   right: -2.25rem;
 }
 
@@ -169,26 +189,6 @@ input[type='radio'] {
   position: absolute;
   right: 17px;
   top: calc(50% - 6px);
-}
-
-.number-minus,
-.number-plus {
-  font-size: 1.875rem;
-  height: 2.625rem;
-  border: none;
-  width: 2.25rem;
-  cursor: pointer;
-  position: absolute;
-  top: 0.625rem;
-  background-color: #2f707c;
-  color: white;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.number-minus:active,
-.number-plus:active {
-  background-color: #003e4a;
 }
 
 @media (hover: hover) and (pointer: fine) {

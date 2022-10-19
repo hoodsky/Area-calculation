@@ -155,7 +155,6 @@ input[type='radio'] {
   align-items: center;
   opacity: 0;
   transition: all 1s ease;
-  // margin-bottom: 50px;
 
   &.active {
     display: flex;
@@ -175,9 +174,27 @@ input[type='radio'] {
   padding-bottom: rem(14);
 }
 
+.number-minus,
+.number-plus {
+  height: rem(42);
+  border: none;
+  width: rem(36);
+  cursor: pointer;
+  position: absolute;
+  top: rem(10);
+  background-color: $main-color - 50%;
+  transition: all 0.5s;
+
+  &:active {
+    background-color: $main-color - 100%;
+  }
+}
+
 .number {
   &-minus {
     border-radius: 50% 0 0 50%;
+    position: absolute;
+
     left: rem(-36);
     &::before {
       content: '';
@@ -191,6 +208,8 @@ input[type='radio'] {
   }
   &-plus {
     border-radius: 0 50% 50% 0;
+    position: absolute;
+
     right: rem(-36);
     &::before {
       content: '';
@@ -212,25 +231,6 @@ input[type='radio'] {
     }
   }
 }
-.number-minus,
-.number-plus {
-  font-size: rem(30);
-  height: rem(42);
-  border: none;
-  width: rem(36);
-  cursor: pointer;
-  // border-radius: 50%;
-  position: absolute;
-  top: rem(10);
-  background-color: $main-color - 50%;
-  color: white;
-  transition: all 0.5s;
-
-  &:active {
-    background-color: $main-color - 100%;
-  }
-}
-
 @media (hover: hover) and (pointer: fine) {
   .number-minus:hover,
   .number-plus:hover {
