@@ -150,7 +150,6 @@ input[type='radio'] {
 }
 
 .number-minus {
-  border-radius: 50% 0 0 50%;
   position: absolute;
   left: -2.25rem;
 }
@@ -166,7 +165,6 @@ input[type='radio'] {
 }
 
 .number-plus {
-  border-radius: 0 50% 50% 0;
   position: absolute;
   right: -2.25rem;
 }
