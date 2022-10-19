@@ -27,8 +27,7 @@ input[type='number'] {
   margin: 0.625rem 0;
   font-family: 'Source Code Pro', monospace;
   outline: none;
-  padding: 0px 2.75rem;
-  border-radius: 2.625rem;
+  padding: 0px 0.75rem;
   height: 2.625rem;
 }
 
@@ -86,7 +85,6 @@ input[type='radio'] {
 }
 
 .tile {
-  display: none;
   padding: 1.25rem 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +101,6 @@ input[type='radio'] {
   opacity: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  margin-bottom: 50px;
 }
 
 .tile.active {
@@ -117,13 +114,26 @@ input[type='radio'] {
   transition: all 1s ease;
 }
 
+.tile__dimensions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .padding {
   padding-bottom: 0.875rem;
 }
 
 .number-minus {
   border-radius: 50% 0 0 50%;
-  left: -0.0625rem;
+  left: -2.25rem;
 }
 
 .number-minus::before {
@@ -138,7 +148,7 @@ input[type='radio'] {
 
 .number-plus {
   border-radius: 0 50% 50% 0;
-  right: -0.0625rem;
+  right: -2.25rem;
 }
 
 .number-plus::before {

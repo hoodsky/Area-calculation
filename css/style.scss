@@ -90,8 +90,8 @@ input[type='number'] {
   margin: rem(10) 0;
   font-family: 'Source Code Pro', monospace;
   outline: none;
-  padding: 0px rem(44);
-  border-radius: rem(42);
+  padding: 0px rem(12);
+  // border-radius: rem(42);
   height: rem(42);
   // border: 1px solid $main-color;
 }
@@ -148,7 +148,6 @@ input[type='radio'] {
 }
 
 .tile {
-  display: none;
   padding: rem(20) rem(10);
   display: flex;
   transform: scale(0);
@@ -156,7 +155,7 @@ input[type='radio'] {
   align-items: center;
   opacity: 0;
   transition: all 1s ease;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 
   &.active {
     display: flex;
@@ -166,6 +165,9 @@ input[type='radio'] {
   }
 
   &__dimensions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -176,7 +178,7 @@ input[type='radio'] {
 .number {
   &-minus {
     border-radius: 50% 0 0 50%;
-    left: rem(-1);
+    left: rem(-36);
     &::before {
       content: '';
       background-color: #ffffff;
@@ -189,7 +191,7 @@ input[type='radio'] {
   }
   &-plus {
     border-radius: 0 50% 50% 0;
-    right: rem(-1);
+    right: rem(-36);
     &::before {
       content: '';
       background-color: #ffffff;
