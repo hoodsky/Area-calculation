@@ -8,20 +8,20 @@
     <!-- Primary Meta Tags -->
     <title>Area calculation</title>
     <meta name="title" content="Area calculation">
-    <meta name="description" content="Посчитай площадь удобно">
+    <meta name="description" content="Порахуй площину">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://area-calculation.netlify.app/index.html">
     <meta property="og:title" content="Area calculation">
-    <meta property="og:description" content="Посчитай площадь удобно">
+    <meta property="og:description" content="Порахуй площину">
     <meta property="og:image" content="">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://area-calculation.netlify.app/index.html">
     <meta property="twitter:title" content="Area calculation">
-    <meta property="twitter:description" content="Посчитай площадь удобно">
+    <meta property="twitter:description" content="Порахуй площину">
     <meta property="twitter:image" content="">
     <title>Area calculation</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
@@ -56,12 +56,12 @@
         <h1>Area calculation</h1>
     </div>
     <section class="tile active">
-        <h2>Введите размеры плитки</h2>
+        <h2>Розміри плитки</h2>
         <div class="tile__dimensions padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
-                <input value="10" min="0" type="number" id="tile-width" placeholder="Ширина" step="5" tabindex="1">
+                <input value="10" min="0" type="number" id="tile-width" placeholder="Довжина" step="5" tabindex="1">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>см</span>
@@ -69,14 +69,14 @@
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
-                <input value="20" min="0" type="number" id="tile-height" placeholder="Высота" step="5" tabindex="2">
+                <input value="20" min="0" type="number" id="tile-height" placeholder="Висота" step="5" tabindex="2">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>см</span>
             </div>
-            <div class="subtext">Площадь одной плитки <span id="one-tile-area">0.02</span> м²</div>
+            <div class="subtext">Пооща однієї плитки <span id="one-tile-area">0.02</span> м²</div>
         </div>
-        <h2>Введите нужную площадь</h2>
+        <h2>Потрібна площина</h2>
         <div class="tile__square">
             <div class="input-block">
                 <button class="number-minus" type="button"
@@ -85,51 +85,51 @@
                     placeholder="Введите нужную площадь">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
-                <span>m²</span>
+                <span>м²</span>
             </div>
         </div>
-        <h2>Нужное количество плитки</h2>
+        <h2>Потрібло плитки</h2>
         <div class="tile__amount padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
                 <input value="500" min="0" type="number" id="tile-num" tabindex="4"
-                    placeholder="Нужное количество плитки">
+                    placeholder="Потрібно плитки">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>шт</span>
             </div>
-            <div class="subtext">Точная площадь <span id="tile-num-area">10</span> м²</div>
+            <div class="subtext">Точна площа<span id="tile-num-area">10</span> м²</div>
         </div>
-        <h2>Количество в пачке</h2>
+        <h2>Квлькість в упаковці</h2>
         <div class="tile__num-in-box padding">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
-                <input value="7" min="0" type="number" id="num-in-box" tabindex="5" placeholder="Плиток в пачке">
+                <input value="7" min="0" type="number" id="num-in-box" tabindex="5" placeholder="Кількість в упаковці">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>шт</span>
             </div>
-            <div class="subtext">Площадь в пачке <span id="num-in-box-area">0.14</span> м²</div>
+            <div class="subtext">площа однієї упаковки<span id="num-in-box-area">0.14</span> м²</div>
         </div>
-        <h2>Нужно пачек</h2>
+        <h2>Потрібно пачок</h2>
         <div class="tile__num-boxes">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
-                <input value="71" min="0" type="number" id="num-box" tabindex="6" placeholder="Нужно коробок">
+                <input value="71" min="0" type="number" id="num-box" tabindex="6" placeholder="Потрібно пачок">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>шт</span>
             </div>
         </div>
-        <h2>и плиток</h2>
+        <h2>та плиток</h2>
         <div class="tile__boxes-plus">
             <div class="input-block">
                 <button class="number-minus" type="button"
                     onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
-                <input value="3" type="number" id="boxes-plus" tabindex="7" placeholder="И плиток">
+                <input value="3" type="number" id="boxes-plus" tabindex="7" placeholder="та плиток">
                 <button class="number-plus" type="button"
                     onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
                 <span>шт</span>
